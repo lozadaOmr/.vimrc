@@ -5,7 +5,7 @@ export ZSH=/home/omar/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="bira"
+ZSH_THEME="spaceship"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -87,3 +87,28 @@ export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/omar
 source /usr/local/bin/virtualenvwrapper.sh
 
+
+# PROMPT
+SPACESHIP_PROMPT_SYMBOL='➔'
+SPACESHIP_PROMPT_ADD_NEWLINE=true
+SPACESHIP_PROMPT_SEPARATE_LINE=true
+
+# GIT
+SPACESHIP_GIT_SHOW=true
+SPACESHIP_GIT_UNCOMMITTED='+'
+SPACESHIP_GIT_UNSTAGED='!'
+SPACESHIP_GIT_UNTRACKED='?'
+SPACESHIP_GIT_STASHED='$'
+SPACESHIP_GIT_UNPULLED='⇣'
+SPACESHIP_GIT_UNPUSHED='⇡'
+
+# NVM
+SPACESHIP_NVM_SHOW=true
+SPACESHIP_NVM_SYMBOL='⬢'
+
+# RUBY
+SPACESHIP_RUBY_SHOW=true
+SPACESHIP_RUBY_SYMBOL='💎'
+
+# VENV
+SPACESHIP_VENV_SHOW=true
