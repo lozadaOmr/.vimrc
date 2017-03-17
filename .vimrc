@@ -13,12 +13,12 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'bling/vim-airline'
 Plugin 'nvie/vim-flake8'
+Plugin 'roman/golden-ratio' 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 
 " Put your non-Plugin stuff after this line
-set background=dark
 
 syntax enable                   " Syntax highlighting
 syntax on                       " Switch syntax highlighting on
@@ -71,5 +71,11 @@ set hlsearch                    " highlight matches
 
 "Root permission on a file inside VIM
 cmap w!! w !sudo tee >/dev/null %
+
+autocmd VimEnter + NERDTree
+autocmd BufEnter * NERDTreeMirror
+autocmd VimEnter * wincmd w
+
+let g:NERDTreeWinSize=12
 
 colorscheme brogrammer
