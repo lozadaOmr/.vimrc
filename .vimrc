@@ -18,8 +18,6 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 " Put your non-Plugin stuff after this line
-colorscheme brogrammer
-
 set background=dark
 
 syntax enable                   " Syntax highlighting
@@ -73,3 +71,5 @@ set hlsearch                    " highlight matches
 
 "Root permission on a file inside VIM
 cmap w!! w !sudo tee >/dev/null %
+
+colorscheme brogrammer
