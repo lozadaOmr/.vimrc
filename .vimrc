@@ -25,8 +25,6 @@ syntax enable                   " Syntax highlighting
 syntax on                       " Switch syntax highlighting on
 filetype plugin indent on       " Enable file type detection and do language-dependent indenting.
 
-set background=dark
-
 set number                      " Show line numbers
 set hidden                      " Allow hidden buffers, don't limit to 1 file per window/split
 set backspace=indent,eol,start  " Allow backspacing over everything in insert mode
