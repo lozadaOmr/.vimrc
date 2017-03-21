@@ -13,8 +13,8 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'bling/vim-airline'
 Plugin 'nvie/vim-flake8'
-Plugin 'roman/golden-ratio'
 Plugin 'Yggdroot/indentLine'
+Plugin 'zhaocai/goldenview.vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -77,9 +77,9 @@ autocmd VimEnter * wincmd w
 
 let g:NERDTreeWinSize=12
 
+set term=screen-256color
+
 nmap <silent> <C-D> :NERDTreeToggle<CR>
 nnoremap <silent> <C-L> :noh<CR><C-L>
-
-set term=screen-256color
 
 colorscheme brogrammer
