@@ -80,4 +80,6 @@ let g:NERDTreeWinSize=12
 nmap <silent> <C-D> :NERDTreeToggle<CR>
 nnoremap <silent> <C-L> :noh<CR><C-L>
 
+set term=screen-256color
+
 colorscheme brogrammer
