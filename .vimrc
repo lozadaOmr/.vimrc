@@ -77,4 +77,7 @@ autocmd VimEnter * wincmd w
 
 let g:NERDTreeWinSize=12
 
+nmap <silent> <C-D> :NERDTreeToggle<CR>
+nnoremap <silent> <C-L> :noh<CR><C-L>
+
 colorscheme brogrammer
