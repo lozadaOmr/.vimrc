@@ -11,10 +11,12 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
+Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'bling/vim-airline'
 Plugin 'nvie/vim-flake8'
 Plugin 'Yggdroot/indentLine'
-Plugin 'zhaocai/goldenview.vim'
+"Plugin 'zhaocai/goldenview.vim'
+Plugin 'roman/golden-ratio'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -23,6 +25,7 @@ filetype plugin indent on    " required
 
 syntax enable                   " Syntax highlighting
 syntax on                       " Switch syntax highlighting on
+filetype plugin indent on       " Enable file type detection and do language-dependent indenting.
 
 set number                      " Show line numbers
 set hidden                      " Allow hidden buffers, don't limit to 1 file per window/split
@@ -70,15 +73,16 @@ set hlsearch                    " highlight matches
 "Root permission on a file inside VIM
 cmap w!! w !sudo tee >/dev/null %
 
+let g:NERDTreeWinSize=18
+let g:indentLine_char='˰'
+let g:indentLine_leadingSpaceEnabled=1
+
 autocmd VimEnter + NERDTree
-autocmd BufEnter * NERDTreeMirror
 autocmd VimEnter * wincmd w
-
-let g:NERDTreeWinSize=12
-
-set term=screen-256color
 
 nmap <silent> <C-D> :NERDTreeToggle<CR>
 nnoremap <silent> <C-L> :noh<CR><C-L>
+
+set term=screen-256color
 
 colorscheme brogrammer
