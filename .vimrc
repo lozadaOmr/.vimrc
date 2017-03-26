@@ -54,6 +54,9 @@ set wildmode=longest,list       " Pressing <Tab> shows command suggestions simil
                                 " in bash 
 set tabstop=4
 set softtabstop=4
+set expandtab                   " Convert tabs to spaces
+set cursorline                  " Highlight current line
+set colorcolumn=80
 
 " We have VCS -- we don't need this stuff.
 set nobackup                    " We have vcs, we don't need backups.
