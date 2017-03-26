@@ -67,8 +67,6 @@ set autoread                    " when a file has changed on disk, just load it.
 set ignorecase                  " case insensitive search
 set smartcase                   " If there are uppercase letters, become case-sensitive.
 set incsearch                   " live incremental searching
-set showmatch                   " live match highlighting
-set hlsearch                    " highlight matches
 
 "Root permission on a file inside VIM
 cmap w!! w !sudo tee >/dev/null %
