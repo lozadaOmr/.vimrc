@@ -79,7 +79,9 @@ let g:indentLine_leadingSpaceEnabled=1
 
 autocmd VimEnter + NERDTree
 autocmd VimEnter * wincmd w
+autocmd BufWritePost *.py call Flake8()
 
+map <C-o> :NERDTreeToggle %<CR>
 nmap <silent> <C-D> :NERDTreeToggle<CR>
 nnoremap <silent> <C-L> :noh<CR><C-L>
 
