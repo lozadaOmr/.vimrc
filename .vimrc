@@ -37,8 +37,8 @@ set incsearch                   " Do incremental searching
 set nu                          " Show line numbers
 set shiftwidth=4                " Set indentation to 4 spaces
 set hlsearch                    " Highlight search terms
-set ic                          " Ignore Case during searches
 set autoindent                  " Start new line at the same indentation level
+set smartindent
 set cmdheight=1                 " The commandbar height
 set showmatch                   " Show matching bracets when text indicator is over them
 set nobackup                    " Do not keep backup files, it's 70's style cluttering
