@@ -71,6 +71,14 @@ set ignorecase                  " case insensitive search
 set smartcase                   " If there are uppercase letters, become case-sensitive.
 set incsearch                   " live incremental searching
 
+set laststatus=2                " vim-airline doesn't appear until I create a new split
+
+
+" Tab Setting Reference for Python and Vim
+autocmd FileType python set sw=4
+autocmd FileType python set ts=4
+autocmd FileType python set sts=4
+
 "Root permission on a file inside VIM
 cmap w!! w !sudo tee >/dev/null %
 
