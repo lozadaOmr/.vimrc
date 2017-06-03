@@ -15,7 +15,7 @@ Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'bling/vim-airline'
 Plugin 'nvie/vim-flake8'
 Plugin 'Yggdroot/indentLine'
-"Plugin 'zhaocai/goldenview.vim'
+Plugin 'bling/vim-bufferline'
 Plugin 'roman/golden-ratio'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
