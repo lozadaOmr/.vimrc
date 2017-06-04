@@ -97,4 +97,6 @@ nnoremap <silent> <C-L> :noh<CR><C-L>
 
 set term=screen-256color
 
+let g:airline_powerline_fonts = 1    " vim-airline symbols
+
 colorscheme brogrammer
