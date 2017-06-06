@@ -15,8 +15,7 @@ Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'bling/vim-airline'
 Plugin 'nvie/vim-flake8'
 Plugin 'Yggdroot/indentLine'
-Plugin 'bling/vim-bufferline'
-Plugin 'roman/golden-ratio'
+Plugin 'zhaocai/GoldenView.Vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -72,6 +71,7 @@ set smartcase                   " If there are uppercase letters, become case-se
 set incsearch                   " live incremental searching
 
 set laststatus=2                " vim-airline doesn't appear until I create a new split
+set winminheight=1              " Never let window be less than 1px
 
 
 " Tab Setting Reference for Python and Vim
@@ -93,6 +93,7 @@ autocmd VimEnter * wincmd w
 
 map <C-o> :NERDTreeToggle %<CR>
 nmap <silent> <C-D> :NERDTreeToggle<CR>
+nmap <silent> <C-A> :EnableGoldenViewAutoResize<CR>
 nnoremap <silent> <C-L> :noh<CR><C-L>
 
 set term=screen-256color
