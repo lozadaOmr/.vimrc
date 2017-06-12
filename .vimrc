@@ -72,6 +72,7 @@ set incsearch                   " live incremental searching
 
 set laststatus=2                " vim-airline doesn't appear until I create a new split
 set winminheight=1              " Never let window be less than 1px
+set nowrap
 
 
 " Tab Setting Reference for Python and Vim
