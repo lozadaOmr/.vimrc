@@ -79,6 +79,9 @@ autocmd FileType python set sw=4
 autocmd FileType python set ts=4
 autocmd FileType python set sts=4
 
+" Setting Reference for JavaScript
+autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
+
 "Root permission on a file inside VIM
 cmap w!! w !sudo tee >/dev/null %
 
