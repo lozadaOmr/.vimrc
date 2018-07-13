@@ -88,6 +88,7 @@ autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
 cmap w!! w !sudo tee >/dev/null %
 
 let g:NERDTreeWinSize=18
+let g:NERDTreeIgnore = ['node_modules']
 let g:indentLine_char='˰'
 let g:indentLine_leadingSpaceEnabled=1
 
