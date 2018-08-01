@@ -12,11 +12,13 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'nvie/vim-flake8'
 Plugin 'Yggdroot/indentLine'
 Plugin 'zhaocai/GoldenView.Vim'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'isRuslan/vim-es6'
+Plugin 'vbundles/ctrlp'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -51,7 +53,7 @@ set ttimeoutlen=50              " Solves: there is a pause when leaving insert m
 set splitbelow                  " Horizontal splits open below current file
 set splitright                  " Vertical splits open to the right of the current file
 set wildmode=longest,list       " Pressing <Tab> shows command suggestions similar to pressing <Tab>
-                                " in bash 
+                                " in bash
 set tabstop=4
 set softtabstop=4
 set expandtab                   " Convert tabs to spaces
@@ -59,9 +61,7 @@ set cursorline                  " Highlight current line
 set colorcolumn=80
 
 " We have VCS -- we don't need this stuff.
-set nobackup                    " We have vcs, we don't need backups.
 set nowritebackup               " We have vcs, we don't need backups.
-set noswapfile                  " They're just annoying. Who likes them?
 
 " don't nag me when hiding buffers
 set autoread                    " when a file has changed on disk, just load it. Don't ask.
@@ -69,7 +69,6 @@ set autoread                    " when a file has changed on disk, just load it.
 " Make search more sane
 set ignorecase                  " case insensitive search
 set smartcase                   " If there are uppercase letters, become case-sensitive.
-set incsearch                   " live incremental searching
 
 set laststatus=2                " vim-airline doesn't appear until I create a new split
 set winminheight=1              " Never let window be less than 1px
@@ -88,7 +87,8 @@ autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
 cmap w!! w !sudo tee >/dev/null %
 
 let g:NERDTreeWinSize=18
-let g:NERDTreeIgnore = ['node_modules']
+let g:NERDTreeIgnore = ['\.pyc$','\.rpyc$', 'node_modules']
+
 let g:indentLine_char='˰'
 let g:indentLine_leadingSpaceEnabled=1
 
