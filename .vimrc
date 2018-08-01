@@ -21,7 +21,6 @@ Plugin 'isRuslan/vim-es6'
 Plugin 'vbundles/ctrlp'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
-filetype plugin indent on    " required
 
 " Put your non-Plugin stuff after this line
 
@@ -81,6 +80,9 @@ autocmd FileType python set ts=4
 autocmd FileType python set sts=4
 
 " Setting Reference for JavaScript
+autocmd Filetype html setlocal ts=2 sts=2 sw=2
+
+" Setting Reference for HTML
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
 
 "Root permission on a file inside VIM
