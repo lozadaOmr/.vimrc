@@ -11,14 +11,14 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'nvie/vim-flake8'
 Plugin 'Yggdroot/indentLine'
 Plugin 'zhaocai/GoldenView.Vim'
 Plugin 'mustache/vim-mustache-handlebars'
-Plugin 'isRuslan/vim-es6'
-Plugin 'vbundles/ctrlp'
+Plugin 'w0rp/ale'
+Plugin 'jiangmiao/auto-pairs'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
@@ -107,5 +107,17 @@ nnoremap <silent> <C-L> :noh<CR><C-L>
 set term=screen-256color
 
 let g:airline_powerline_fonts = 1    " vim-airline symbols
+
+" ale (linter)
+let g:airline#extensions#ale#enabled = 1
+let b:ale_warn_about_trailing_whitespace = 0
+let g:ale_set_loclist = 0
+let g:ale_set_quickfix = 1
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_lint_on_enter = 0
+let g:ale_linters = {
+\   'javascript': ['standard'],
+\   'python': ['flake8']
+\}
 
 colorscheme brogrammer
