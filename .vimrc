@@ -19,6 +19,7 @@ Plugin 'zhaocai/GoldenView.Vim'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'w0rp/ale'
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'ctrlpvim/ctrlp.vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
@@ -85,6 +86,9 @@ autocmd Filetype html setlocal ts=2 sts=2 sw=2
 " Setting Reference for HTML
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
 
+" Automatic formatting on save fro JS
+" autocmd bufwritepost *.js silent !standard --fix %
+
 "Root permission on a file inside VIM
 cmap w!! w !sudo tee >/dev/null %
 
@@ -119,5 +123,12 @@ let g:ale_linters = {
 \   'javascript': ['standard'],
 \   'python': ['flake8']
 \}
+
+" CtrlP
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+
+let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 
 colorscheme brogrammer
