@@ -20,6 +20,7 @@ Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'w0rp/ale'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'machakann/vim-sandwich'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
@@ -95,6 +96,7 @@ cmap w!! w !sudo tee >/dev/null %
 let g:NERDTreeWinSize=18
 let g:NERDTreeIgnore = ['\.pyc$','\.rpyc$', 'node_modules']
 
+" indentLine
 let g:indentLine_char='˰'
 let g:indentLine_leadingSpaceEnabled=1
 
