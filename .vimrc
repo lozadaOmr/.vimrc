@@ -21,6 +21,7 @@ Plugin 'w0rp/ale'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'machakann/vim-sandwich'
+Plugin 'ntpeters/vim-better-whitespace'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 
@@ -97,8 +98,7 @@ let g:NERDTreeWinSize=18
 let g:NERDTreeIgnore = ['\.pyc$','\.rpyc$', 'node_modules']
 
 " indentLine
-let g:indentLine_char='˰'
-let g:indentLine_leadingSpaceEnabled=1
+let g:indentLine_char='¦'
 
 autocmd VimEnter + NERDTree
 autocmd VimEnter * wincmd w
@@ -132,5 +132,10 @@ let g:ctrlp_cmd = 'CtrlP'
 
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+
+" vim-better-whitespace
+let g:better_whitespace_enabled=1
+let g:better_whitespace_ctermcolor='black'
+let g:better_whitespace_guicolor='black'
 
 colorscheme brogrammer
