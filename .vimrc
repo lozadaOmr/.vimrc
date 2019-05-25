@@ -113,6 +113,7 @@ nnoremap <silent> <C-L> :noh<CR><C-L>
 set term=screen-256color
 
 let g:airline_powerline_fonts = 1    " vim-airline symbols
+let g:airline#extensions#tabline#enabled = 0
 
 " ale (linter)
 let g:airline#extensions#ale#enabled = 1
