@@ -49,7 +49,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(docker-compose git kubectl sublime redis-cli)
+plugins=(docker-compose git kubectl sublime redis-cli npm)
 
 # User configuration
 
@@ -62,9 +62,10 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+fi
+#else
 #   export EDITOR='mvim'
 # fi
 
