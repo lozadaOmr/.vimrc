@@ -158,4 +158,6 @@ if (empty($TMUX))
   endif
 endif
 
+hi MatchParen cterm=bold ctermbg=none ctermfg=magenta
+
 colorscheme onedark
