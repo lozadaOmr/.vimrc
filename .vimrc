@@ -12,7 +12,8 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+" Plugin 'vim-airline/vim-airline-themes'
+Plugin 'gkeep/iceberg-dark'
 Plugin 'nvie/vim-flake8'
 Plugin 'Yggdroot/indentLine'
 Plugin 'zhaocai/GoldenView.Vim'
@@ -54,7 +55,7 @@ set noswapfile                  " Do not write annoying intermediate swap files,
                                 "    anyway?
                                 "    https://github.com/nvie/vimrc/blob/master/vimrc#L141
 
-set ttimeoutlen=50              " Solves: there is a pause when leaving insert mode
+set timeoutlen=50              " Solves: there is a pause when leaving insert mode
 set splitbelow                  " Horizontal splits open below current file
 set splitright                  " Vertical splits open to the right of the current file
 set wildmode=longest,list       " Pressing <Tab> shows command suggestions similar to pressing <Tab>
@@ -110,13 +111,25 @@ nmap <silent> <C-D> :NERDTreeToggle<CR>
 nmap <silent> <C-A> :EnableGoldenViewAutoResize<CR>
 nmap <silent> <C-N>  <Plug>GoldenViewNext
 nmap <silent> <C-P>  <Plug>GoldenViewPrevious
-nnoremap <silent> <C-L> :noh<CR><C-L>
+noremap <silent> <C-L> :noh<CR><C-L>
 
 set term=screen-256color
 
+let g:airline_theme='icebergDark'
 let g:airline_powerline_fonts = 1    " vim-airline symbols
-let g:airline_them='onedark'
 let g:airline#extensions#tabline#enabled = 0
+
+" unicode symbols
+let g:airline_left_sep = '»'
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '«'
+let g:airline_right_sep = '◀'
+
+" airline symbols
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
 
 " ale (linter)
 let g:airline#extensions#ale#enabled = 1
@@ -160,4 +173,5 @@ endif
 
 hi MatchParen cterm=bold ctermbg=none ctermfg=magenta
 
-colorscheme onedark
+set background=dark
+colorscheme iceberg
