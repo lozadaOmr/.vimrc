@@ -12,3 +12,5 @@
     path = .gitconfig-personal
 [includeIf "gitdir:~/workspace/"]
     path = .gitconfig-work
+[core]
+    editor = vim
