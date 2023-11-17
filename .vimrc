@@ -85,6 +85,9 @@ autocmd FileType python set sw=4
 autocmd FileType python set ts=4
 autocmd FileType python set sts=4
 
+autocmd BufNewFile,BufRead [jJ]enkinsfile set syntax=groovy
+autocmd BufNewFile,BufRead *.groovy set syntax=groovy
+
 " Setting Reference for JavaScript
 autocmd Filetype html setlocal ts=2 sts=2 sw=2
 
@@ -126,10 +129,10 @@ let g:airline_right_sep = '«'
 let g:airline_right_sep = '◀'
 
 " airline symbols
-let g:airline_left_sep = '-»'
-let g:airline_left_alt_sep = '-▶'
-let g:airline_right_sep = '«-'
-let g:airline_right_alt_sep = '◀-'
+let g:airline_left_sep = '»'
+let g:airline_left_alt_sep = '◀'
+let g:airline_right_sep = '«'
+let g:airline_right_alt_sep = '▶'
 
 " ale (linter)
 let g:airline#extensions#ale#enabled = 1
