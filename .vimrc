@@ -12,7 +12,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'vim-airline/vim-airline'
-" Plugin 'vim-airline/vim-airline-themes'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'gkeep/iceberg-dark'
 Plugin 'nvie/vim-flake8'
 Plugin 'Yggdroot/indentLine'
@@ -121,18 +121,6 @@ set term=screen-256color
 let g:airline_theme='icebergDark'
 let g:airline_powerline_fonts = 1    " vim-airline symbols
 let g:airline#extensions#tabline#enabled = 0
-
-" unicode symbols
-let g:airline_left_sep = '»'
-let g:airline_left_sep = '▶'
-let g:airline_right_sep = '«'
-let g:airline_right_sep = '◀'
-
-" airline symbols
-let g:airline_left_sep = '»'
-let g:airline_left_alt_sep = '◀'
-let g:airline_right_sep = '«'
-let g:airline_right_alt_sep = '▶'
 
 " ale (linter)
 let g:airline#extensions#ale#enabled = 1
