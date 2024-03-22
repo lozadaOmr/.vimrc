@@ -49,7 +49,9 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(docker-compose git kubectl sublime redis-cli npm)
+plugins=(aws docker-compose git kubectl sublime redis-cli npm tig tmux vscode)
+
+ZSH_TMUX_AUTOSTART="false"
 
 # User configuration
 
@@ -84,12 +86,9 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias az="~/bin/az"
-
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/omar
 #source /usr/local/bin/virtualenvwrapper.sh
-
 
 # PROMPT
 SPACESHIP_PROMPT_SYMBOL='➔'
@@ -109,10 +108,6 @@ SPACESHIP_GIT_UNPUSHED='⇡'
 SPACESHIP_NVM_SHOW=true
 SPACESHIP_NVM_SYMBOL='⬢'
 
-# RUBY
-SPACESHIP_RUBY_SHOW=true
-SPACESHIP_RUBY_SYMBOL='💎'
-
 # VENV
 SPACESHIP_VENV_SHOW=true
 
@@ -120,3 +115,5 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+# Load Functions
+source ~/.zshrc.d/functions.zsh
